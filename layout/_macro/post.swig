@@ -218,6 +218,8 @@
     {%- if not is_index %}
       {{- next_inject('postBodyEnd') }}
 
+      {{ partial('_macro/post-end-tag.swig') }}
+
       {%- if post.reward_settings.enable %}
         {{ partial('_partials/post/post-reward.swig') }}
       {%- endif %}
